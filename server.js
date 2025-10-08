@@ -1,14 +1,10 @@
 require('dotenv').config();
 const multer = require('multer');
 const path = require('path');
-if (!process.env.MONGO_URI) {
-  console.error('ERROR: MONGODB_URI not found in .env');
-  process.exit(1);
-}
 const express = require('express');
 const cors = require('cors');
 const connectDb = require('./config/db'); 
- // Your MongoDB connection file
+
 const userRoutes = require('./routes/userRoutes');
 const postRoutes = require('./routes/postRoutes');
 const commentRoutes = require('./routes/commentRoutes');
@@ -33,6 +29,7 @@ app.use((err, req, res, next) => {
   }
   next(err);
 });
+
 // Start server
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
