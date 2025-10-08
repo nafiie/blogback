@@ -1,4 +1,4 @@
-const Post = require('../models/post');
+const Post = require('../models/Post');
 const cloudinary = require('../config/cloudinary');
 
 // Create Post

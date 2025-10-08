@@ -1,5 +1,5 @@
 const Comment = require('../models/Comment');
-const Post = require('../models/post');
+const Post = require('../models/Post');
 
 // Add a comment
 exports.addComment = async (req, res) => {
